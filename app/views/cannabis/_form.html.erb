@@ -1,0 +1,39 @@
+<%= form_for(@cannabi) do |f| %>
+  <% if @cannabi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cannabi.errors.count, "error") %> prohibited this cannabi from being saved:</h2>
+
+      <ul>
+      <% @cannabi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sativa %><br>
+    <%= f.text_field :sativa %>
+  </div>
+  <div class="field">
+    <%= f.label :indica %><br>
+    <%= f.text_field :indica %>
+  </div>
+  <div class="field">
+    <%= f.label :interior %><br>
+    <%= f.text_field :interior %>
+  </div>
+  <div class="field">
+    <%= f.label :exterior %><br>
+    <%= f.text_field :exterior %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id %><br>
+    <%= f.select("usuario_id",Usuario.all.collect{|l|[l.nombre, l.id] }, {include_black: 'seleccione usuario' })%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+<% end %>

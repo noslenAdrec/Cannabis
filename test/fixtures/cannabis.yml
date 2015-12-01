@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sativa: MyString
+  indica: MyString
+  interior: MyString
+  exterior: MyString
+  usuario_id: 
+
+two:
+  sativa: MyString
+  indica: MyString
+  interior: MyString
+  exterior: MyString
+  usuario_id: 

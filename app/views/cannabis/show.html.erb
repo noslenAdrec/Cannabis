@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sativa:</strong>
+  <%= @cannabi.sativa %>
+</p>
+
+<p>
+  <strong>Indica:</strong>
+  <%= @cannabi.indica %>
+</p>
+
+<p>
+  <strong>Interior:</strong>
+  <%= @cannabi.interior %>
+</p>
+
+<p>
+  <strong>Exterior:</strong>
+  <%= @cannabi.exterior %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @cannabi.usuario.nombre %>
+</p>
+
+<%= link_to 'Edit', edit_cannabi_path(@cannabi) %> |
+<%= link_to 'Back', cannabis_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cannabis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sativa</th>
+      <th>Indica</th>
+      <th>Interior</th>
+      <th>Exterior</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cannabis.each do |cannabi| %>
+      <tr>
+        <td><%= cannabi.sativa %></td>
+        <td><%= cannabi.indica %></td>
+        <td><%= cannabi.interior %></td>
+        <td><%= cannabi.exterior %></td>
+        <td><%= cannabi.usuario.nombre %></td>
+        <td><%= link_to 'Show', cannabi %></td>
+        <td><%= link_to 'Edit', edit_cannabi_path(cannabi) %></td>
+        <td><%= link_to 'Destroy', cannabi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cannabi', new_cannabi_path %>
